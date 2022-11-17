@@ -1,0 +1,27 @@
+
+{% extends 'base.html'%}
+{% block title %}
+predict
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='predictstyles.css')}}">
+<body>
+    <div class="navbar">
+    <ul>
+        <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+        <li><a href="{{url_for('info')}}">INFO</a></li>
+        <li><a href="{{url_for('predict')}}">PREDICT</a></li>
+    </ul>
+    </div>
+    <h1>PARKINSON DETECTION</h1>
+
+    <h2>Parkinson Classifier</h2>
+    <center>
+        <label for="images" class="drop-container">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input type="file" id="images" accept="image/*" required>
+        </label>
+    </center>
+    <center><input type="submit" class="submit"></center>
+{% endblock %}

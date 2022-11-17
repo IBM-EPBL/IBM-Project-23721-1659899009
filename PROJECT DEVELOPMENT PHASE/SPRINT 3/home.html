@@ -1,0 +1,29 @@
+
+{% extends 'base.html'%}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='homestyles.css')}}">
+<div class="navbar">
+    <ul>
+        <li><a class="active" href="{{url_for('home')}}">HOME</a></li>
+        <li><a href="{{url_for('info')}}">INFO</a></li>
+        <li><a href="{{url_for('predict')}}">PREDICT</a></li>
+    </ul>
+</div>
+<div class="text">
+    <h1>Detecting Parkinson Disease using ML</h1>
+
+    <p>Parkison's Disease(PD) is a prevalent neurodegenerative disease affecting about 1% of the world population over
+        the
+        age of 55(Nussbaum and Ellis,2003).About five million people worldwide are estimated to have PD.
+        PD prevalence is expected to double by the year 2030.Parkison's disease(PD) patient care is limited by
+        inadequate,sporadio symptom monitoring,infrequent access to care, and sparse encounters with healthcare
+        professionals leading to poor medical desicion making and sub-optimal health-related outcomes.
+        Recent advance in digital health approaches have enabled objective and remote montioring of impaired motor
+        function with the promise of profoundly changing the diagnostic ,monitoring,and therapetic landscape in PD.
+    </p>
+</div>
+
+{% endblock %}
